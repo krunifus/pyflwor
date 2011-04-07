@@ -9,9 +9,9 @@ File: parser.py
 Purpose: The LALR parser for the query compiler.
 '''
 
-from ply import yacc
-from lexer import tokens, Lexer
-import symbols
+from pyflwor.ply import yacc
+from pyflwor.lexer import tokens, Lexer
+from pyflwor import symbols
 
 ## The parser does not build an abstract syntax tree nor does it build
 ## intermediate code, instead it composes functions and objects together. These

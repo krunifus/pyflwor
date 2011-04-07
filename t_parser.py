@@ -12,7 +12,7 @@ NB: Should test most of the language, as in make sure examples compile. Tests
 '''
 
 import unittest, os, sys, base64, itertools, random, time
-import pyquery
+from pyflwor import pyquery
 
 
 class TestParser(unittest.TestCase):

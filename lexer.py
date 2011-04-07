@@ -9,8 +9,8 @@ File: lexer.py
 Purpose: The lexer front end for the Query Compiler.
 '''
 
-from ply import lex
-from ply.lex import Token
+from pyflwor.ply import lex
+from pyflwor.ply.lex import Token
 
 tokens = ('NUMBER', 'STRING', 'NAME', 'SOME', 'EVERY', 'IN', 'NOT', 'SATISFIES', 'AND', 'OR', 'IS',
             'SUBSET', 'SUPERSET', 'PROPER', 'FOR', 'LET', 'RETURN', 'WHERE',

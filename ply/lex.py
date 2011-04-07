@@ -172,6 +172,7 @@ class Lexer:
     def writetab(self,tabfile,outputdir=""):
         if isinstance(tabfile,types.ModuleType):
             return
+        from pyflwor.parse_tables import outputdir
         basetabfilename = tabfile.split(".")[-1]
         filename = os.path.join(outputdir,basetabfilename)+".py"
         tf = open(filename,"w")

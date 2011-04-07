@@ -11,8 +11,8 @@ NB: More tests need to be written, this is just the start.
 '''
 
 import unittest, os, sys, base64, itertools, random, time
-from OrderedSet import OrderedSet as oset
-import pyquery
+from pyflwor.OrderedSet import OrderedSet as oset
+from pyflwor import pyquery
 
 exe = pyquery.execute
 class TestPyQuery(unittest.TestCase):

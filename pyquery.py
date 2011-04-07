@@ -9,8 +9,8 @@ File: pyquery.py
 Purpose: The public API for PyQuery.
 '''
 
-from parser import Parser
-from lexer import Lexer
+from pyflwor.parser import Parser
+from pyflwor.lexer import Lexer
 
 def compile(query):
     '''

@@ -11,8 +11,8 @@ Purpose: Tests for the Lexer
 
 import unittest, os, sys, base64, itertools, random, time
 from contextlib import contextmanager
-from ply import lex
-import lexer
+from pyflwor.ply import lex
+from pyflwor import lexer
 
 def showcmp(a,b):
     print (a.type == b.type, a.value == b.value, a.lexpos == b.lexpos, a.lineno == b.lineno)

@@ -13,10 +13,11 @@ Table of Contents
 -----------------
 
 1. Introduction
-2. Motivation
-3. Usage Example
-4. Writing PyQuery
-5. Formal Language Specification
+2. Installation
+3. Motivation
+4. Usage Example
+5. Writing PyQuery
+6. Formal Language Specification
 
 Introducton
 -----------
@@ -28,6 +29,26 @@ Query Language), XPath2.0, and XQuery. It is still under rapid development so
 expect the language to change often. PyQuery works on any type of Python object.
 The only requirement is that the objects returned have to be hashable, as they
 are currently returned as a set.
+
+
+Installation
+------------
+
+There is currently no installation script, but if you set your python path 
+to point to the directory above the one this file is in, you should be able
+to "import pyflwor" from anywhere on your system.
+
+for example, if this file is /home/user_name/my_lib/pyflwor/README.md, run:
+
+  $ export PYTHONPATH=/home/user_name/my_lib:$PYTHONPATH
+
+Then in some other directory, you can open your python interpreter and test:
+
+  >>> import pyflwor
+  >>> dir(pyflwor)
+  ['OrderedSet', '__builtins__', '__doc__', '__file__', '__name__', 
+  '__package__', '__path__', 'compile', 'execute', 'lexer', 'parser', 
+  'ply', 'pyquery', 'symbols']
 
 
 Motivation

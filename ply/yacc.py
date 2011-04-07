@@ -68,7 +68,7 @@ __tabversion__ = "3.2"       # Table version
 # Change these to modify the default behavior of yacc (if you wish)
 #-----------------------------------------------------------------------------
 
-yaccdebug   = 1                # Debugging mode.  If set, yacc generates a
+yaccdebug   = 0                # Debugging mode.  If set, yacc generates a
                                # a 'parser.out' file in the current directory
 
 debug_file  = 'parser.out'     # Default name of the debugging file
@@ -102,10 +102,7 @@ except AttributeError:
 
 # Python 2.x/3.0 compatibility.
 def load_ply_lex():
-    if sys.version_info[0] < 3:
-        import lex
-    else:
-        import ply.lex as lex
+    import pyflwor.ply.lex as lex
     return lex
 
 # This object is a stand-in for a logging object created by the
@@ -2550,6 +2547,7 @@ class LRGeneratedTable(LRTable):
 
     def write_table(self,modulename,outputdir='',signature=""):
         basemodulename = modulename.split(".")[-1]
+        from pyflwor.parse_tables import outputdir
         filename = os.path.join(outputdir,basemodulename) + ".py"
         try:
             f = open(filename,"w")
